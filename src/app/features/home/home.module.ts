@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { PhoneTemplateComponent } from './components/phone-template/phone-template.component';
+import { SmsNotificationComponent } from './components/sms-notification/sms-notification.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    PhoneTemplateComponent,
+    SmsNotificationComponent
   ],
   imports: [
     CommonModule,

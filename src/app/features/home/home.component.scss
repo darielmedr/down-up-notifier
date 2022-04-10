@@ -1,0 +1,9 @@
+.content {
+  position: relative;
+  background-color: red;
+
+  app-phone-template {
+    position: absolute;
+    left: 50%;
+  }
+}

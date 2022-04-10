@@ -1,0 +1,6 @@
+@mixin center-in-parent($x: 50%, $y: 50%) {
+    position: absolute;
+    top: $y;
+    left: $x;
+    transform: translate(-50%, -50%);
+}
