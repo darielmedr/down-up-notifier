@@ -1,4 +1,99 @@
-.container {
+$notificationHeight: 5rem;
+$notificationGap: 1rem;
+$bgColor: var(--primary-color);
+$accentBgColor: var(--accent-color);
+$textColor: var(--text-primary-color);
+$textMargin: 0.5rem;
+
+.notification-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $notificationGap;
+
+  .notification {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: $notificationHeight;
+    border-radius: 5px;
+    background-color: $bgColor;
+    transform-origin: top left;
+    transform: scale(0);
+    animation: popup-close 4s ease-in-out infinite;
+
+    &:nth-of-type(2n) {
+      background-color: $accentBgColor;
+
+      .notification__logo::after {
+        content: '\e0e6';
+        right: calc(#{$notificationHeight} * 0.15);
+        left: auto;
+      }
+
+      .notification__text {
+        position: absolute;
+        left: $textMargin;
+        align-items: flex-start;
+      }
+    }
+
+    &__logo {
+      position: relative;
+
+      &::after {
+        content: "\e625";
+        font-family: "Material Icons";
+        position: absolute;
+        top: calc(#{$notificationHeight} * 0.5);
+        left: calc(#{$notificationHeight} * 0.15);
+        transform: translateY(-50%);
+        font-size: calc(#{$notificationHeight} * 0.7);
+        color: $textColor;
+      }
+    }
+
+    &__text {
+      position: absolute;
+      right: $textMargin;
+      top: $textMargin;
+      height: calc(100% - 2 * $textMargin);
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+    &__line {
+      width: 100%;
+      height: 0.3rem;
+      border-radius: 3px;
+      background-color: $textColor;
+
+      &:nth-of-type(2n) {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .notification-container div:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.2}s;
+  }
+}
+
+@keyframes popup-close {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  20%, 60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  80%, 100% {
+    transform: translateX(150%);
+  }
 }

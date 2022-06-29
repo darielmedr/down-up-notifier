@@ -7,13 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneTemplateComponent implements OnInit {
 
-  public layers: string[] = Array(2);
+  public layers: string[] = Array(4);
   public layerDepth: number = 4;
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.layers.length)
-  }
+  ngOnInit(): void {}
 
 }

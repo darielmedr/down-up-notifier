@@ -1,5 +1,11 @@
-<div class="container">
-    <div class="notification">
-        sms
+<div class="notification-container">
+    <div class="notification" *ngFor="let notification of notifications">
+        <div class="notification__logo"></div>
+        <div class="notification__text">
+            <div class="notification__line"></div>
+            <div class="notification__line"></div>
+            <div class="notification__line"></div>
+            <div class="notification__line"></div>
+        </div>
     </div>
 </div>

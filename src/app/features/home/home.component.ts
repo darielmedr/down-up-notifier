@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public startText: string = "Get instantly notify by";
+  public textOptions: string[] = [
+    'SMS',
+    'Email',
+  ];
+  public typeSpeed: number = 100;
+  public initialDelay: number = this.startText.length * this.typeSpeed + 2000;
+
   constructor() { }
 
   ngOnInit(): void {

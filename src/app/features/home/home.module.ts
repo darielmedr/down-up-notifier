@@ -5,17 +5,19 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { PhoneTemplateComponent } from './components/phone-template/phone-template.component';
 import { SmsNotificationComponent } from './components/sms-notification/sms-notification.component';
+import { AutoTypingComponent } from './components/auto-typing/auto-typing.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     PhoneTemplateComponent,
-    SmsNotificationComponent
+    SmsNotificationComponent,
+    AutoTypingComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
   ]
 })
 export class HomeModule { }

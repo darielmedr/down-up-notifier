@@ -14,9 +14,9 @@ export class AppComponent {
       icon: 'home',
     },
     {
-      name: 'Subscribe',
-      path: 'subscription',
-      icon: 'notifications_active',
+      name: 'Appointment',
+      path: 'appointment',
+      icon: 'event',
     },
   ];
 

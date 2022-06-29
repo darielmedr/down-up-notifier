@@ -1,7 +1,13 @@
-<div class="content">
-    <p>home works!</p>
+<section class="container">
+    <div class="content">
+        <h1 class="type-writer">
+            <app-auto-typing [text]="startText" [options]="textOptions"></app-auto-typing>
+        </h1>
+    </div>
 
-    <app-phone-template>
-        <app-sms-notification></app-sms-notification>
-    </app-phone-template>
-</div>
+    <div class="phone">
+        <app-phone-template>
+            <app-sms-notification></app-sms-notification>
+        </app-phone-template>
+    </div>
+</section>

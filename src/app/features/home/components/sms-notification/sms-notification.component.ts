@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmsNotificationComponent implements OnInit {
 
+  public notifications: unknown[] = new Array(4);
+
   constructor() { }
 
   ngOnInit(): void {
