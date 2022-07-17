@@ -12,14 +12,12 @@ import { registerLocaleData } from '@angular/common';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
     CoreModule,
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'es-CU' }
-  ],
+  providers: [{ provide: LOCALE_ID, useValue: 'es-CU' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {

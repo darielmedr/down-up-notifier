@@ -7,17 +7,13 @@ import { PhoneTemplateComponent } from './components/phone-template/phone-templa
 import { SmsNotificationComponent } from './components/sms-notification/sms-notification.component';
 import { AutoTypingComponent } from './components/auto-typing/auto-typing.component';
 
-
 @NgModule({
   declarations: [
+    AutoTypingComponent,
     HomeComponent,
     PhoneTemplateComponent,
     SmsNotificationComponent,
-    AutoTypingComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-  ]
+  imports: [CommonModule, HomeRoutingModule],
 })
-export class HomeModule { }
+export class HomeModule {}

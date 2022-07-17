@@ -8,19 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
 @NgModule({
-  declarations: [
-    AppointmentComponent,
-    AppointmentFormComponent
-  ],
+  declarations: [AppointmentComponent, AppointmentFormComponent],
   imports: [
-    CommonModule,
     AppointmentRoutingModule,
+    CommonModule,
+    FormsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule,
-    SharedModule
-  ]
+    SharedModule,
+  ],
 })
-export class AppointmentModule { }
+export class AppointmentModule {}

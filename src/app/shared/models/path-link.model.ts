@@ -1,5 +1,5 @@
 export interface PathLink {
-  name: string,
+  name: string;
   path: string;
   icon: string;
 }

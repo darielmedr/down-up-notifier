@@ -1,4 +1,4 @@
-import { getValuesName } from "src/app/core/utils/enum-keys.util";
+import { getValuesName } from 'src/app/core/utils/enum-keys.util';
 
 enum Religion {
   'otro',

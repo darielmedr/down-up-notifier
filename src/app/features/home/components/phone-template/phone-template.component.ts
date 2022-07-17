@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-phone-template',
   templateUrl: './phone-template.component.html',
-  styleUrls: ['./phone-template.component.scss']
+  styleUrls: ['./phone-template.component.scss'],
 })
-export class PhoneTemplateComponent implements OnInit {
-
+export class PhoneTemplateComponent {
   public layers: string[] = Array(4);
   public layerDepth: number = 4;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {}
-
+  public layersTrackBy(index: number, layer: string): number {
+    return index;
+  }
 }

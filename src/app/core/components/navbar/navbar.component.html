@@ -1,14 +1,14 @@
 <mat-toolbar class="navbar" color="primary">
-    <span class="navbar__logo">DownUpNotifier</span>
+  <span class="navbar__logo">DownUpNotifier</span>
 
-    <ul class="navbar__links">
-        <li *ngFor="let link of links">
-            <a mat-button [routerLink]="link.path" routerLinkActive="active-router">
-                <div class="navbar__links--link">
-                    <mat-icon>{{ link.icon }}</mat-icon>
-                    <span>{{ link.name }}</span>
-                </div>
-            </a>
-        </li>
-    </ul>
+  <ul class="navbar__links">
+    <li *ngFor="let link of links; trackBy: linksTrackBy">
+      <a mat-button [routerLink]="link.path" routerLinkActive="active-router">
+        <div class="navbar__links--link">
+          <mat-icon>{{ link.icon }}</mat-icon>
+          <span>{{ link.name }}</span>
+        </div>
+      </a>
+    </li>
+  </ul>
 </mat-toolbar>

@@ -1,33 +1,40 @@
 <div class="phone-container">
-    <div class="phone phone--layer bottom-layers" *ngFor="let layer of layers; index as layerIndex;"
-        [style.top.px]="(layerIndex + 1) * layerDepth" [style.left.px]="(layerIndex + 1) * layerDepth">
-    </div>
+  <div
+    class="phone phone--layer bottom-layers"
+    *ngFor="let layer of layers; trackBy: layersTrackBy; index as layerIndex"
+    [style.top.px]="(layerIndex + 1) * layerDepth"
+    [style.left.px]="(layerIndex + 1) * layerDepth"
+  ></div>
 
-    <div class="phone phone--layer middle-layers" *ngFor="let layer of layers; index as layerIndex;"
-        [style.top.px]="(layerIndex + 1) * 0.5 * layerDepth" [style.left.px]="(layerIndex + 1) * 0.5 * layerDepth">
-        <div class="phone__power-button"></div>
-    </div>
+  <div
+    class="phone phone--layer middle-layers"
+    *ngFor="let layer of layers; trackBy: layersTrackBy; index as layerIndex"
+    [style.top.px]="(layerIndex + 1) * 0.5 * layerDepth"
+    [style.left.px]="(layerIndex + 1) * 0.5 * layerDepth"
+  >
+    <div class="phone__power-button"></div>
+  </div>
 
-    <div class="phone">
-        <div class="phone__top-elements">
-            <div class="phone__top-elements__speaker"></div>
-            <div class="phone__top-elements__camera"></div>
-        </div>
-        <div class="phone__volumen-buttons">
-            <div class="phone__volumen-buttons__button"></div>
-            <div class="phone__volumen-buttons__button"></div>
-        </div>
-        <div class="phone__screen">
-            <div class="phone__screen__content">
-                <div class="phone__screen__content__placeholder">
-                    <div class="circle"></div>
-                    <div class="text"></div>
-                    <div class="image"></div>
-                    <div class="text"></div>
-                </div>
-
-                <ng-content></ng-content>
-            </div>
-        </div>
+  <div class="phone">
+    <div class="phone__top-elements">
+      <div class="phone__top-elements__speaker"></div>
+      <div class="phone__top-elements__camera"></div>
     </div>
+    <div class="phone__volumen-buttons">
+      <div class="phone__volumen-buttons__button"></div>
+      <div class="phone__volumen-buttons__button"></div>
+    </div>
+    <div class="phone__screen">
+      <div class="phone__screen__content">
+        <div class="phone__screen__content__placeholder">
+          <div class="circle"></div>
+          <div class="text"></div>
+          <div class="image"></div>
+          <div class="text"></div>
+        </div>
+
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
 </div>

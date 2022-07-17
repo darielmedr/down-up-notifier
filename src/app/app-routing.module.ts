@@ -15,7 +15,9 @@ const routes: Routes = [
   {
     path: 'appointment',
     loadChildren: () =>
-      import('./features/appointment/appointment.module').then((m) => m.AppointmentModule),
+      import('./features/appointment/appointment.module').then(
+        (m) => m.AppointmentModule,
+      ),
   },
   {
     path: '**',

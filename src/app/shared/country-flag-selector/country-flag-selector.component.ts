@@ -8,7 +8,10 @@ import {
   Output,
 } from '@angular/core';
 import { of } from 'rxjs';
-import { COUNTRIES, Country } from 'src/app/core/constants/country-phone-codes.constant';
+import {
+  COUNTRIES,
+  Country,
+} from 'src/app/core/constants/country-phone-codes.constant';
 import {
   CountryCode,
   COUNTRY_CODES,
@@ -25,10 +28,14 @@ export class CountryFlagSelectorComponent {
   public countryCodes: CountryCode[] = ['AC', 'AD', 'AE', 'AF'];
 
   @Output()
-  public selectedCountry: EventEmitter<CountryCode> = new EventEmitter();
+  public readonly selectedCountry: EventEmitter<CountryCode> = new EventEmitter();
 
   constructor(@Inject(COUNTRIES) private COUNTRIES: Country[]) {
     console.log('Countries', this.formatCountries(COUNTRIES));
+  }
+
+  public countryCodesTrackBy(index: number, countryCode: CountryCode): number {
+    return index;
   }
 
   public countryChange(value: CountryCode): void {
@@ -41,7 +48,7 @@ export class CountryFlagSelectorComponent {
       name: string;
       Iso: string;
       countryCode: string;
-    }[]
+    }[],
   ) {
     const phoneCodesByCountry: any = {};
 

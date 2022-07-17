@@ -4,10 +4,9 @@ import { AsYouType, MetadataJson, PhoneNumber } from 'libphonenumber-js';
 import { CountryCode } from '../models/country-code.model';
 
 @Directive({
-  selector: '[appPhoneMask]'
+  selector: '[appPhoneMask]',
 })
 export class PhoneMaskDirective {
-
   @Input()
   public countryCode: CountryCode = 'US';
 

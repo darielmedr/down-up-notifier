@@ -6,38 +6,17 @@ import { CountryFlagSelectorComponent } from './country-flag-selector/country-fl
 import { FlagPipe } from './pipes/flag.pipe';
 import { FlagEmojiPipe } from './pipes/flag-emoji.pipe';
 
-const components: any[] = [
-  CountryFlagSelectorComponent
-];
+const components: any[] = [CountryFlagSelectorComponent];
 
-const directives: any[] = [
-  PhoneMaskDirective
-];
+const directives: any[] = [PhoneMaskDirective];
 
-const pipes: any[] = [
-  FlagPipe,
-  FlagEmojiPipe,
-];
+const pipes: any[] = [FlagPipe, FlagEmojiPipe];
 
-const modules: any[] = [
-  MaterialModule
-];
+const modules: any[] = [MaterialModule];
 
 @NgModule({
-  declarations: [
-    ...components,
-    ...directives,
-    ...pipes
-  ],
-  imports: [
-    CommonModule,
-    ...modules
-  ],
-  exports: [
-    ...components,
-    ...directives,
-    ...pipes,
-    ...modules
-  ]
+  declarations: [...components, ...directives, ...pipes],
+  imports: [CommonModule, ...modules],
+  exports: [...components, ...directives, ...pipes, ...modules],
 })
-export class SharedModule { }
+export class SharedModule {}

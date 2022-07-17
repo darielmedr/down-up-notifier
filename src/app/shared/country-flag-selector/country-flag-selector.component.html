@@ -1,10 +1,19 @@
 <mat-form-field>
-    <mat-label>Favorite food</mat-label>
-    <mat-select #selector (selectionChange)="countryChange(selector.value)">
-        <mat-option *ngFor="let countryCode of countryCodes" [value]="countryCode">
-            <img class="flags" with="20" height="20" src="{{ countryCode | flag }}" alt="Flag of country: {{ countryCode }}">
-            {{ countryCode | uppercase }}
-            {{ countryCode | flagEmoji }}
-        </mat-option>
-    </mat-select>
+  <mat-label>Favorite food</mat-label>
+  <mat-select #selector (selectionChange)="countryChange(selector.value)">
+    <mat-option
+      *ngFor="let countryCode of countryCodes; trackBy: countryCodesTrackBy"
+      [value]="countryCode"
+    >
+      <img
+        class="flags"
+        with="20"
+        height="20"
+        src="{{ countryCode | flag }}"
+        alt="Flag of country: {{ countryCode }}"
+      />
+      {{ countryCode | uppercase }}
+      {{ countryCode | flagEmoji }}
+    </mat-option>
+  </mat-select>
 </mat-form-field>

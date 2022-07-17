@@ -52,4 +52,8 @@ export class AppointmentFormComponent implements OnInit {
     const info: AppointmentInfo = this.appointmentForm.value as AppointmentInfo;
     console.log(info);
   }
+
+  public trackByIndexFn(index: number, value: unknown): number {
+    return index;
+  }
 }

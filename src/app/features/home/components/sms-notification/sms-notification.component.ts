@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sms-notification',
   templateUrl: './sms-notification.component.html',
-  styleUrls: ['./sms-notification.component.scss']
+  styleUrls: ['./sms-notification.component.scss'],
 })
-export class SmsNotificationComponent implements OnInit {
-
+export class SmsNotificationComponent {
   public notifications: unknown[] = new Array(4);
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  public notificationsTrackBy(index: number, notification: unknown): number {
+    return index;
   }
-
 }
