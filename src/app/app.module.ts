@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 
 import localeEsCU from '@angular/common/locales/es-CU';
 import { registerLocaleData } from '@angular/common';
+import { NavbarModule } from './features/navbar/navbar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { registerLocaleData } from '@angular/common';
     BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
+    NavbarModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es-CU' }],
   bootstrap: [AppComponent],

@@ -1,0 +1,16 @@
+<ul
+  class="links"
+  [ngClass]="mode | getClassNameByViewMode"
+  [class.open]="openMenu"
+  (click)="close()"
+>
+  <li *ngIf="openMenu" class="close-btn">
+    <button mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </li>
+
+  <li class="link" *ngFor="let link of links; trackBy: linksTrackByFn">
+    <app-path-link [link]="link"></app-path-link>
+  </li>
+</ul>

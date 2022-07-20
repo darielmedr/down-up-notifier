@@ -1,0 +1,20 @@
+<mat-toolbar class="navbar" color="primary">
+  <span class="logo" routerLink="/">DownUpNotifier</span>
+
+  <ng-container
+    *ngIf="(isHandset$ | async) && (closeMenu$ | async); else linksMenu"
+  >
+    <button mat-icon-button class="menu-btn" (click)="openMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </ng-container>
+
+  <ng-template #linksMenu>
+    <app-navbar-links
+      [links]="(links$ | async) ?? []"
+      [mode]="(mode$ | async) ?? 'default'"
+      [openMenu]="(openMenu$ | async) ?? false"
+      (closeMenu)="closeMenu()"
+    ></app-navbar-links>
+  </ng-template>
+</mat-toolbar>
