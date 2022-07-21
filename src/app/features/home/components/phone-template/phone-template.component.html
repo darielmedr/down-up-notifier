@@ -1,14 +1,14 @@
 <div class="phone-container">
   <div
     class="phone phone--layer bottom-layers"
-    *ngFor="let layer of layers; trackBy: layersTrackBy; index as layerIndex"
+    *ngFor="let layer of layers; trackBy: layersTrackByFn; index as layerIndex"
     [style.top.px]="(layerIndex + 1) * layerDepth"
     [style.left.px]="(layerIndex + 1) * layerDepth"
   ></div>
 
   <div
     class="phone phone--layer middle-layers"
-    *ngFor="let layer of layers; trackBy: layersTrackBy; index as layerIndex"
+    *ngFor="let layer of layers; trackBy: layersTrackByFn; index as layerIndex"
     [style.top.px]="(layerIndex + 1) * 0.5 * layerDepth"
     [style.left.px]="(layerIndex + 1) * 0.5 * layerDepth"
   >

@@ -1,7 +1,7 @@
 <div class="notification-container">
   <div
     class="notification"
-    *ngFor="let notification of notifications; trackBy: notificationsTrackBy"
+    *ngFor="let notification of notifications; trackBy: notificationsTrackByFn"
   >
     <div class="notification__logo"></div>
     <div class="notification__text">

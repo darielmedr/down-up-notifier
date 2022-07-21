@@ -11,7 +11,7 @@ export class PhoneTemplateComponent {
 
   constructor() {}
 
-  public layersTrackBy(index: number, layer: string): number {
+  public layersTrackByFn(index: number, layer: string): number {
     return index;
   }
 }

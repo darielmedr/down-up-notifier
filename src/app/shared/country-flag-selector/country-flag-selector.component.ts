@@ -34,7 +34,10 @@ export class CountryFlagSelectorComponent {
     console.log('Countries', this.formatCountries(COUNTRIES));
   }
 
-  public countryCodesTrackBy(index: number, countryCode: CountryCode): number {
+  public countryCodesTrackByFn(
+    index: number,
+    countryCode: CountryCode,
+  ): number {
     return index;
   }
 

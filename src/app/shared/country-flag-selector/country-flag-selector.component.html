@@ -2,7 +2,7 @@
   <mat-label>Favorite food</mat-label>
   <mat-select #selector (selectionChange)="countryChange(selector.value)">
     <mat-option
-      *ngFor="let countryCode of countryCodes; trackBy: countryCodesTrackBy"
+      *ngFor="let countryCode of countryCodes; trackBy: countryCodesTrackByFn"
       [value]="countryCode"
     >
       <img

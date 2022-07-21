@@ -10,7 +10,7 @@ export class SmsNotificationComponent {
 
   constructor() {}
 
-  public notificationsTrackBy(index: number, notification: unknown): number {
+  public notificationsTrackByFn(index: number, notification: unknown): number {
     return index;
   }
 }
