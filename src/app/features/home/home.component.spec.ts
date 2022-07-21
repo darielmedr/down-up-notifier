@@ -6,7 +6,7 @@ import { SmsNotificationComponent } from './components/sms-notification/sms-noti
 
 import { HomeComponent } from './home.component';
 
-fdescribe('HomeComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
