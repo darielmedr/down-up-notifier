@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponents } from 'ng-mocks';
 
 import { AppointmentComponent } from './appointment.component';
+import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 
 describe('AppointmentComponent', () => {
   let component: AppointmentComponent;
@@ -8,9 +10,11 @@ describe('AppointmentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppointmentComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        AppointmentComponent,
+        ...MockComponents(AppointmentFormComponent),
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

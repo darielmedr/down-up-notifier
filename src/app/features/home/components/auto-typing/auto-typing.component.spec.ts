@@ -8,9 +8,8 @@ describe('AutoTypingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AutoTypingComponent ]
-    })
-    .compileComponents();
+      declarations: [AutoTypingComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
