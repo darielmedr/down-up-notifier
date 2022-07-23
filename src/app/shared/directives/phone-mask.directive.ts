@@ -1,6 +1,6 @@
 import { Directive, HostListener, Input } from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { AsYouType, MetadataJson, PhoneNumber } from 'libphonenumber-js';
+import { AsYouType } from 'libphonenumber-js';
 import { CountryCode } from '../models/country-code.model';
 
 @Directive({
@@ -8,7 +8,7 @@ import { CountryCode } from '../models/country-code.model';
 })
 export class PhoneMaskDirective {
   @Input()
-  public countryCode: CountryCode = 'US';
+  public countryCode: CountryCode = 'ES';
 
   @HostListener('ngModelChange', ['$event'])
   onModelChange(value: string) {
