@@ -1,0 +1,16 @@
+<mat-form-field class="country-selector">
+  <mat-label>Pais</mat-label>
+  <mat-select
+    #selector
+    [value]="selectedCountry"
+    (selectionChange)="changeCountry(selector.value)"
+  >
+    <mat-option
+      *ngFor="let countryCode of countryCodes; trackBy: countriesTrackByFn"
+      [value]="countryCode"
+    >
+      {{ countryCode | flagEmoji }}
+      {{ countryCode | phoneCodePrefix }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

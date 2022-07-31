@@ -1,0 +1,15 @@
+<div class="form">
+  <app-phone-country-selector
+    [selectedCountry]="(countryCode$ | async) ?? defaultCountryCode"
+    [countryCodes]="countryCodes"
+    (selectedCountryChange)="selectCountry($event)"
+  ></app-phone-country-selector>
+
+  <app-phone-input
+    [countryCode]="(countryCode$ | async) ?? defaultCountryCode"
+    (phoneNumber)="changePhoneNumber($event)"
+    (touched)="markAsTouched()"
+  ></app-phone-input>
+</div>
+
+<mat-error *ngIf="isInvalid$ | async">Invalid phone number</mat-error>

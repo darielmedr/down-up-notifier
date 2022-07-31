@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { AppointmentInfo } from 'src/app/features/appointment/models/appointment-info.model';
 import { GENDER_LIST } from 'src/app/features/appointment/models/gender.model';
 import { REASON_LIST } from 'src/app/features/appointment/models/reason.model';
 import { RELIGION_LIST } from 'src/app/features/appointment/models/religion.model';
+import { CountryCode } from 'src/app/modules/phone-form/models/country-code.model';
 
 @Component({
   selector: 'app-appointment-form',
   templateUrl: './appointment-form.component.html',
   styleUrls: ['./appointment-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppointmentFormComponent implements OnInit {
   public appointmentForm: FormGroup = new FormGroup({});
@@ -28,18 +31,23 @@ export class AppointmentFormComponent implements OnInit {
   }
 
   private initForm(): void {
-    this.appointmentForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      dni: ['', [Validators.required, Validators.minLength(6)]],
-      passportNumber: ['', Validators.required],
-      birthDate: ['', Validators.required],
-      gender: ['', Validators.required],
-      religion: ['', Validators.required],
-      reason: ['', Validators.required],
-    });
+    this.appointmentForm = this.fb.group(
+      {
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        phoneNumber: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        dni: ['', [Validators.required, Validators.minLength(6)]],
+        passportNumber: ['', Validators.required],
+        birthDate: ['', Validators.required],
+        gender: ['', Validators.required],
+        religion: ['', Validators.required],
+        reason: ['', Validators.required],
+      },
+      {
+        updateOn: 'blur',
+      },
+    );
   }
 
   public sendAppointmentInfo(): void {

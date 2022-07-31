@@ -1,5 +1,5 @@
-import { CountryCode } from 'src/app/shared/models/country-code.model';
 import { Pipe, PipeTransform } from '@angular/core';
+import { CountryCode } from '../models/country-code.model';
 
 @Pipe({
   name: 'flagEmoji',

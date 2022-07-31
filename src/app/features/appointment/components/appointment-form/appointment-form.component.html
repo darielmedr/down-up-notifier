@@ -22,23 +22,14 @@
     </p>
     <p>
       <mat-form-field>
-        <mat-label>Correo electr&oacute;nico</mat-label>
-        <input matInput formControlName="email" />
+        <mat-label>Correo electronico</mat-label>
+        <input matInput type="email" formControlName="email" />
         <mat-icon matSuffix>mail</mat-icon>
-        <mat-error
-          >Introduzca su direcci&oacute;n de correo
-          electr&oacute;nico</mat-error
-        >
+        <mat-error>Introduzca su direccion de correo electronico</mat-error>
       </mat-form-field>
     </p>
     <p>
-      <mat-form-field>
-        <mat-label>N&uacute;mero de tel&eacute;fono</mat-label>
-        <input matInput appPhoneMask formControlName="phoneNumber" />
-        <mat-icon matSuffix>phone</mat-icon>
-        <mat-error>Introduzca su n&uacute;mero de tel&eacute;fono</mat-error>
-      </mat-form-field>
-      <app-country-flag-selector></app-country-flag-selector>
+      <app-phone-form formControlName="phoneNumber"></app-phone-form>
     </p>
     <p>
       <mat-form-field>
@@ -53,7 +44,7 @@
         <mat-label>No. de pasaporte</mat-label>
         <input matInput formControlName="passportNumber" />
         <mat-icon matSuffix>assignment_ind</mat-icon>
-        <mat-error>Introduzca el n&uacute;mero de pasaporte</mat-error>
+        <mat-error>Introduzca el numero de pasaporte</mat-error>
       </mat-form-field>
     </p>
     <p>
@@ -81,7 +72,7 @@
     </p>
     <p>
       <mat-form-field>
-        <mat-label>G&eacute;nero</mat-label>
+        <mat-label>Genero</mat-label>
         <mat-select formControlName="gender">
           <mat-option
             *ngFor="let gender of genderOptions; trackBy: trackByIndexFn"
@@ -90,13 +81,13 @@
             {{ gender | titlecase }}
           </mat-option>
         </mat-select>
-        <mat-error>Seleccione una opci&oacute;n</mat-error>
-        <mat-hint>Seleccione una opci&oacute;n</mat-hint>
+        <mat-error>Seleccione una opcion</mat-error>
+        <mat-hint>Seleccione una opcion</mat-hint>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <mat-label>Religi&oacute;n</mat-label>
+        <mat-label>Religion</mat-label>
         <mat-select formControlName="religion">
           <mat-option
             *ngFor="let religion of religionOptions; trackBy: trackByIndexFn"
@@ -105,8 +96,8 @@
             {{ religion | titlecase }}
           </mat-option>
         </mat-select>
-        <mat-error>Seleccione una opci&oacute;n</mat-error>
-        <mat-hint>Seleccione una opci&oacute;n</mat-hint>
+        <mat-error>Seleccione una opcion</mat-error>
+        <mat-hint>Seleccione una opcion</mat-hint>
       </mat-form-field>
     </p>
     <p>
@@ -121,7 +112,7 @@
           </mat-option>
         </mat-select>
         <mat-error>Seleccione el motivo</mat-error>
-        <mat-hint>Seleccione una opci&oacute;n</mat-hint>
+        <mat-hint>Seleccione una opcion</mat-hint>
       </mat-form-field>
     </p>
   </div>

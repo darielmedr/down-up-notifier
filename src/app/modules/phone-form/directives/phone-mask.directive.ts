@@ -1,12 +1,19 @@
-import { Directive, HostListener, Input } from '@angular/core';
+import {
+  Directive,
+  HostListener,
+  Input,
+  OnChanges,
+  SimpleChange,
+  SimpleChanges,
+} from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { AsYouType } from 'libphonenumber-js';
-import { CountryCode } from '../models/country-code.model';
+import { AsYouType } from 'libphonenumber-js/mobile';
+import { CountryCode } from 'src/app/modules/phone-form/models/country-code.model';
 
 @Directive({
   selector: '[appPhoneMask]',
 })
-export class PhoneMaskDirective {
+export class PhoneMaskDirective implements OnChanges {
   @Input()
   public countryCode: CountryCode = 'ES';
 
@@ -22,6 +29,15 @@ export class PhoneMaskDirective {
   }
 
   constructor(private ngControl: NgControl) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const countryCodeChange: SimpleChange = changes['countryCode'];
+
+    if (!!countryCodeChange && !countryCodeChange.isFirstChange()) {
+      const currentValue: string = this.ngControl.value ?? '';
+      this.onInputChange(currentValue);
+    }
+  }
 
   private onInputChange(value: string): void {
     const digitsValue: string = this.removeNonDigitChars(value);

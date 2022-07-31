@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label>Numero de telefono</mat-label>
+  <input
+    matInput
+    appPhoneMask
+    [countryCode]="countryCode"
+    [(ngModel)]="maskedPhoneNumber"
+    (ngModelChange)="emitPhoneNumber()"
+    (blur)="emitTouched()"
+    type="tel"
+  />
+  <mat-icon matSuffix>phone</mat-icon>
+  <mat-error>Introduzca su numero de telefono</mat-error>
+</mat-form-field>

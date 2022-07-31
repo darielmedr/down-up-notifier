@@ -1,3 +1,4 @@
+import { CountryCode } from '../models/country-code.model';
 import { FlagEmojiPipe } from './flag-emoji.pipe';
 
 describe('FlagEmojiPipe', () => {
@@ -9,8 +10,8 @@ describe('FlagEmojiPipe', () => {
   it('should return the flag emoji from country code', () => {
     const pipe = new FlagEmojiPipe();
 
-    const countryCode = 'ES';
-    const expectedValue = '🇪🇸';
+    const countryCode: CountryCode = 'ES';
+    const expectedValue: string = '🇪🇸';
 
     const result = pipe.transform(countryCode);
 

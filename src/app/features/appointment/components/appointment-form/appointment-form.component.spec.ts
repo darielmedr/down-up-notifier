@@ -3,9 +3,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { MockComponents, MockDirectives, MockModule } from 'ng-mocks';
-import { CountryFlagSelectorComponent } from 'src/app/shared/country-flag-selector/country-flag-selector.component';
-import { PhoneMaskDirective } from 'src/app/shared/directives/phone-mask.directive';
+import { MockDirectives, MockModule } from 'ng-mocks';
+import { PhoneMaskDirective } from 'src/app/modules/phone-form/directives/phone-mask.directive';
+import { PhoneFormModule } from 'src/app/modules/phone-form/phone-form.module';
 
 import { AppointmentFormComponent } from './appointment-form.component';
 
@@ -18,13 +18,13 @@ describe('AppointmentFormComponent', () => {
       declarations: [
         AppointmentFormComponent,
         ...MockDirectives(PhoneMaskDirective),
-        ...MockComponents(CountryFlagSelectorComponent),
       ],
       imports: [
         ReactiveFormsModule,
         MockModule(MatFormFieldModule),
         MockModule(MatDatepickerModule),
         MockModule(MatSelectModule),
+        MockModule(PhoneFormModule),
       ],
     }).compileComponents();
   });
