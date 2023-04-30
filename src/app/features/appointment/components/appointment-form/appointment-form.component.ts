@@ -1,11 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import { AppointmentInfo } from 'src/app/features/appointment/models/appointment-info.model';
 import { GENDER_LIST } from 'src/app/features/appointment/models/gender.model';
 import { REASON_LIST } from 'src/app/features/appointment/models/reason.model';
 import { RELIGION_LIST } from 'src/app/features/appointment/models/religion.model';
-import { CountryCode } from 'src/app/modules/phone-form/models/country-code.model';
 
 @Component({
   selector: 'app-appointment-form',
@@ -14,7 +16,7 @@ import { CountryCode } from 'src/app/modules/phone-form/models/country-code.mode
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppointmentFormComponent implements OnInit {
-  public appointmentForm: FormGroup = new FormGroup({});
+  public appointmentForm: UntypedFormGroup = new UntypedFormGroup({});
 
   public maxDate: Date = new Date();
   public minDate: Date = new Date(this.maxDate.getFullYear() - 120, 1, 1);
@@ -24,7 +26,7 @@ export class AppointmentFormComponent implements OnInit {
   public religionOptions: string[] = RELIGION_LIST;
   public reasonOptions: string[] = REASON_LIST;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -61,7 +63,7 @@ export class AppointmentFormComponent implements OnInit {
     console.log(info);
   }
 
-  public trackByIndexFn(index: number, value: unknown): number {
+  public trackByIndexFn(index: number, _: unknown): number {
     return index;
   }
 }
