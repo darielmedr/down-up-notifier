@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
     steps:
     - name: Checkout ✅
       uses: actions/checkout@v3
@@ -19,9 +19,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Build 🛠
-      run: npm run build:prod
+    - name: Clean install ⚙️
+      run: npm ci
     - name: Lint 🔎
       run: npm run lint
+    - name: Build 🛠
+      run: npm run build:prod
     - name: Test 🧪
       run: npm run test:ci
