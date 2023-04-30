@@ -4,30 +4,30 @@
 * Fork at: https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzAwNjQ2NiIsIj9lcjwjYjNkMWQxIiwiO2VyPCMwMDQ4NDl$LCIlPmBePCMyMTJmNDUiLCI~ZXI8I2JjYzFjNyIsIjtlcjwjMTQxZDJlfiwid2Fybj5gXjwjZWYxZjFmIiwiP2VyPCNmYWJjYmMiLCI7ZXI8I2U4MTIxMn4sIj9UZXh0PCMxMDEwMTAiLCI~PTwjZjNmM2YzIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyYzJjMmN$LCJmb250cz5bYEA8KC00IiwiZmFtaWx5PE1vbnRzZXJyYXQiLCJ2YXJpYW50PHJlZ3VsYXJ$LGBAPCgtMyIsImZhbWlseTxNb250c2VycmF0fixgQDwoLTIiLCJmYW1pbHk8TW9udHNlcnJhdH4sYEA8KC0xIiwiZmFtaWx5PE1vbnRzZXJyYXR$LGBAPGhlYWRsaW5lIiwiZmFtaWx5PE1vbnRzZXJyYXR$LGBAPHRpdGxlIiwiZmFtaWx5PE1vbnRzZXJyYXQiLCJ2YXJpYW50PHJlZ3VsYXJ$LGBAPHN1YiktMiIsImZhbWlseTxNb250c2VycmF0fixgQDxzdWIpLTEiLCJmYW1pbHk8TW9udHNlcnJhdCIsInZhcmlhbnQ8cmVndWxhcn4sYEA8Ym9keS0yIiwiZmFtaWx5PE1vbnRzZXJyYXQiLCJ2YXJpYW50PHJlZ3VsYXJ$LGBAPGJvZHktMSIsImZhbWlseTxNb250c2VycmF0fixgQDxidXR0b24iLCJmYW1pbHk8TW9udHNlcnJhdCIsInZhcmlhbnQ8cmVndWxhcn4sYEA8Y2FwdGlvbiIsImZhbWlseTxNb250c2VycmF0fixgQDxpbnB1dCIsImZhbWlseTxNb250c2VycmF0Iiwic2l6ZT5udWxsfV0sImljb25zPEZpbGxlZCIsIj9uZXNzPnRydWUsInZlcnNpb24$MTN9
 */
 
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 
 $fontConfig: (
   display-4:
-    mat.define-typography-level(112px, 112px, 400, "Montserrat", -0.0134em),
+    mat.define-typography-level(112px, 112px, 400, 'Montserrat', -0.0134em),
   display-3:
-    mat.define-typography-level(56px, 56px, 400, "Montserrat", -0.0089em),
-  display-2: mat.define-typography-level(45px, 48px, 400, "Montserrat", 0em),
+    mat.define-typography-level(56px, 56px, 400, 'Montserrat', -0.0089em),
+  display-2: mat.define-typography-level(45px, 48px, 400, 'Montserrat', 0em),
   display-1:
-    mat.define-typography-level(34px, 40px, 400, "Montserrat", 0.0074em),
-  headline: mat.define-typography-level(24px, 32px, 400, "Montserrat", 0em),
-  title: mat.define-typography-level(20px, 32px, 400, "Montserrat", 0.0075em),
+    mat.define-typography-level(34px, 40px, 400, 'Montserrat', 0.0074em),
+  headline: mat.define-typography-level(24px, 32px, 400, 'Montserrat', 0em),
+  title: mat.define-typography-level(20px, 32px, 400, 'Montserrat', 0.0075em),
   subheading-2:
-    mat.define-typography-level(16px, 28px, 400, "Montserrat", 0.0094em),
+    mat.define-typography-level(16px, 28px, 400, 'Montserrat', 0.0094em),
   subheading-1:
-    mat.define-typography-level(15px, 24px, 400, "Montserrat", 0.0067em),
-  body-2: mat.define-typography-level(14px, 24px, 400, "Montserrat", 0.0179em),
-  body-1: mat.define-typography-level(14px, 20px, 400, "Montserrat", 0.0179em),
-  button: mat.define-typography-level(14px, 14px, 400, "Montserrat", 0.0893em),
-  caption: mat.define-typography-level(12px, 20px, 400, "Montserrat", 0.0333em),
-  input: mat.define-typography-level(inherit, 1.125, 400, "Montserrat", 1.5px),
+    mat.define-typography-level(15px, 24px, 400, 'Montserrat', 0.0067em),
+  body-2: mat.define-typography-level(14px, 24px, 400, 'Montserrat', 0.0179em),
+  body-1: mat.define-typography-level(14px, 20px, 400, 'Montserrat', 0.0179em),
+  button: mat.define-typography-level(14px, 14px, 400, 'Montserrat', 0.0893em),
+  caption: mat.define-typography-level(12px, 20px, 400, 'Montserrat', 0.0333em),
+  input: mat.define-typography-level(inherit, 1.125, 400, 'Montserrat', 1.5px),
 );
 
 // Foreground Elements
@@ -56,7 +56,7 @@ $mat-light-theme-foreground: (
   text: $dark-primary-text,
   slider-min: $dark-primary-text,
   slider-off: rgba($dark-text, 0.26),
-  slider-off-active: $dark-disabled-text
+  slider-off-active: $dark-disabled-text,
 );
 
 // Dark Theme text
@@ -145,7 +145,16 @@ $mat-dark-theme-background: (
 );
 
 // Compute font config
-@include mat.core($fontConfig);
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy($fontConfig);`
+@include mat.all-component-typographies($fontConfig);
+@include mat.core();
 
 // Theme Config
 
@@ -244,24 +253,26 @@ $altTheme: (
 // Specific component overrides, pieces that are not in line with the general theming
 
 // Handle buttons appropriately, with respect to line-height
-.mat-raised-button,
-.mat-stroked-button,
-.mat-flat-button {
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-unelevated-button {
   padding: 0 1.15em;
   margin: 0 0.65em;
   min-width: 3em;
   line-height: 36.4px;
 }
 
-.mat-standard-chip {
+.mat-mdc-standard-chip {
   padding: 0.5em 0.85em;
   min-height: 2.5em;
 }
 
 .material-icons {
-  font-size: 24px;
-  font-family: "Material Icons", "Material Icons";
+  font-size: 24px !important;
+  width: 24px !important;
+  height: 24px !important;
+  font-family: 'Material Icons', 'Material Icons';
   .mat-badge-content {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
   }
 }
