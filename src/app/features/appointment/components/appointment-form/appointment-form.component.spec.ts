@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
 import { MockDirectives, MockModule } from 'ng-mocks';
 import { PhoneMaskDirective } from 'src/app/modules/phone-form/directives/phone-mask.directive';
 import { PhoneFormModule } from 'src/app/modules/phone-form/phone-form.module';

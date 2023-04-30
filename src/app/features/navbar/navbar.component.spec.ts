@@ -1,7 +1,7 @@
 import { PathLink } from './models/path-link.model';
 import { NavbarLinksComponent } from './components/navbar-links/navbar-links.component';
 import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MockComponents, MockModule, MockProviders } from 'ng-mocks';
