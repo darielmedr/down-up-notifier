@@ -19,9 +19,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Lint 🔎
-      run: npm run lint
     - name: Build 🛠
       run: npm run build:prod
+    - name: Lint 🔎
+      run: npm run lint
     - name: Test 🧪
       run: npm run test:ci
