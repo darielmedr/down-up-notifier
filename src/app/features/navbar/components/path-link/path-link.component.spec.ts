@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 import { PathLink } from 'src/app/features/navbar/models/path-link.model';
 import { PathLinkComponent } from './path-link.component';
 import { By } from '@angular/platform-browser';
-import { Router, RouterLinkWithHref } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 describe('PathLinkComponent', () => {
@@ -68,7 +68,7 @@ describe('PathLinkComponent', () => {
     fixture.detectChanges();
 
     const linkElement = fixture.debugElement.query(By.css('a'));
-    const routerLink = linkElement.injector.get(RouterLinkWithHref);
+    const routerLink = linkElement.injector.get(RouterLink);
     const expectedPath: string = '/fake-path';
 
     expect(routerLink['href']).toEqual(expectedPath);
