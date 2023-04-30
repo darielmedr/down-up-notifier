@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
+import { MatSelectModule } from '@angular/material/select';
 import { MockModule, MockPipes } from 'ng-mocks';
 import { FlagEmojiPipe } from '../../pipes/flag-emoji.pipe';
 import { PhoneCodePrefixPipe } from '../../pipes/phone-code-prefix.pipe';

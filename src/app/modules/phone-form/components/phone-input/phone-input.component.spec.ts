@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+import { MatInputModule } from '@angular/material/input';
 import { MockDirectives, MockModule } from 'ng-mocks';
 import { PhoneMaskDirective } from '../../directives/phone-mask.directive';
 

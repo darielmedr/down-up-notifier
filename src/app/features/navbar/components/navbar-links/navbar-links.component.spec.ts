@@ -12,7 +12,7 @@ import { NavbarLinksComponent } from './navbar-links.component';
 import { By } from '@angular/platform-browser';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatButtonModule } from '@angular/material/button';
 
 const LEFT_MOUSE_BUTTON = 0;
 

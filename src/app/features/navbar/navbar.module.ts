@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatButtonModule } from '@angular/material/button';
 import { NavbarLinksComponent } from './components/navbar-links/navbar-links.component';
 import { PathLinkComponent } from './components/path-link/path-link.component';
 import { GetClassNameByViewModePipe } from './pipes/get-class-name-by-view-mode.pipe';
